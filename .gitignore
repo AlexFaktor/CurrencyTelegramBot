@@ -1,0 +1,6 @@
+.vs/
+bin/ 
+obj/
+Properties/
+*.user
+/MatrixTrace/Properties/launchSettings.json
