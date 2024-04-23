@@ -8,14 +8,9 @@ namespace CurrencyTelegramBot
     {
         private readonly HttpClient _client = client;
 
-        private const string _privatBankAPI = @"https://api.privatbank.ua/p24api/exchange_rates?json&date="; // format date=01.12.2020 
-
         public async Task<decimal?> GetForeinceCurrencyToUAH(DateTime date, EСurrencyСode? code)
         {
-            string dateLine = date.ToString("dd.MM.yyyy");
-            string link = _privatBankAPI + dateLine;
-
-            var response = await _client.GetStringAsync( link );
+            var response = await _client.GetStringAsync(@"https://api.privatbank.ua/p24api/exchange_rates?json&date=" + $"{date:dd.MM.yyyy}");
             var data = JObject.Parse(response);
 
             var saleRateNB = data.SelectToken($"$.exchangeRate[?(@.currency=='{СurrencyСode.GetCode(code)}')].saleRateNB");

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace CurrencyTelegramBot.Enums
+﻿namespace CurrencyTelegramBot.Enums
 {
     public enum EСurrencyСode
     {
@@ -17,6 +15,19 @@ namespace CurrencyTelegramBot.Enums
 
     public class СurrencyСode
     {
+        public static string GetCodeDescription()
+        {
+            return "UAH - Ukrainian hryvnia\n" +
+                  "USD - US dollar\n" +
+                  "EUR - Euro\n" +
+                  "CHF - Swiss franc\n" +
+                  "GBP - British pound\n" +
+                  "PLZ - Polish zloty\n" +
+                  "SEK - Swedish krona\n" +
+                  "XAU - Gold\n" +
+                  "CAD - Canadian dollar";
+        }
+
         public static EСurrencyСode? GetCode(string code)
         {
             return code switch
