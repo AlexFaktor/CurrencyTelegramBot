@@ -1,5 +1,4 @@
 ﻿using CurrencyTelegramBot.Enums;
-using System;
 
 namespace CurrencyTelegramBot.Interfaces
 {

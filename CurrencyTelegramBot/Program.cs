@@ -37,7 +37,6 @@ class Program
         var message = update.Message;
         Console.WriteLine($"{message?.From?.Username} | {message?.Text}");
 
-
         using CancellationTokenSource cts = new();
 
         if (message?.Text is null)
