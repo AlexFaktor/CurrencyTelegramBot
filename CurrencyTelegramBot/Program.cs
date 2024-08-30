@@ -8,7 +8,7 @@ using Telegram.Bot.Types.Enums;
 
 class Program
 {
-    static readonly ITelegramBotClient botClient = new TelegramBotClient("6745328129:AAFoVIuIV1V8r7N5PpoW-yfoiTBr4b6CTqA");
+    static readonly ITelegramBotClient botClient = new TelegramBotClient("");
     static readonly HttpPrivatBankCurrency httpPrivatBankCurrency = new(new HttpClient());
 
     static async Task Main()
